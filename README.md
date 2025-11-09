@@ -4,9 +4,8 @@ Website pribadi modern untuk menampilkan proyek, pengalaman, dan keahlian Dzaky.
 
 ## 📸 Pratinjau
 
-![Tampilan Halaman Utama](./public/images/screenshots/portfolio-home.png)
+![Tampilan Halaman Utama]<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/4d111019-7252-42fd-b278-cb9f9908d40b" />
 
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/4d111019-7252-42fd-b278-cb9f9908d40b" />
 
 ## ✨ Fitur Utama
 - Animasi interaktif (hero, timeline pendidikan, hover card) menggunakan utilitas motion bersama.
