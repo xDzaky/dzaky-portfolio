@@ -1,6 +1,6 @@
 "use client";
 
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import type {
   ElementRef,
   ElementType,
@@ -33,11 +33,15 @@ function RevealInner<Tag extends MotionTag = "div">(
   ref: ForwardedRef<ElementRef<DOMMotionComponents[Tag]>>,
 ) {
   const prefersReducedMotion = useReducedMotion() ?? false;
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  const shouldAnimate = mounted && !prefersReducedMotion;
 
   const motionComponents = motion as unknown as DOMMotionComponents;
   const MotionComponent = (motionComponents[as] ?? motion.div) as ElementType;
 
-  const defaultInitial = prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 24 };
+  const defaultInitial = prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 24 };
   const defaultWhileInView = { opacity: 1, y: 0 };
   const defaultTransition = prefersReducedMotion
     ? { duration: 0 }
@@ -48,9 +52,10 @@ function RevealInner<Tag extends MotionTag = "div">(
     <MotionComponent
       ref={ref}
       className={cn(className)}
-      initial={initial ?? defaultInitial}
-      whileInView={whileInView ?? defaultWhileInView}
-      transition={transition ?? defaultTransition}
+      initial={initial ?? (shouldAnimate ? defaultInitial : false)}
+      animate={!shouldAnimate ? defaultWhileInView : undefined}
+      whileInView={whileInView ?? (shouldAnimate ? defaultWhileInView : undefined)}
+      transition={transition ?? (shouldAnimate ? defaultTransition : undefined)}
       viewport={viewport ?? defaultViewport}
       {...(rest as HTMLMotionProps<Tag>)}
     >

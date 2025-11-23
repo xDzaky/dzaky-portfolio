@@ -1,6 +1,7 @@
 import type { ComponentProps, CSSProperties, MouseEvent, ReactNode } from "react";
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, type SpringOptions } from "framer-motion";
+import Image from "next/image";
 
 interface TiltedCardProps {
   imageSrc: ComponentProps<"img">["src"];
@@ -116,15 +117,16 @@ export default function TiltedCard({
           scale,
         }}
       >
-        <motion.img
-          src={imageSrc}
-          alt={altText}
-          className="absolute left-0 top-0 rounded-[15px] object-cover [transform:translateZ(0)] will-change-transform"
-          style={{
-            width: imageWidth,
-            height: imageHeight,
-          }}
-        />
+        <motion.div className="relative h-full w-full overflow-hidden rounded-[15px]">
+          <Image
+            src={imageSrc}
+            alt={altText}
+            fill
+            sizes="(min-width: 1024px) 360px, (min-width: 640px) 45vw, 80vw"
+            className="object-cover [transform:translateZ(0)]"
+            priority
+          />
+        </motion.div>
 
         {displayOverlayContent && overlayContent && (
           <motion.div className="absolute left-0 top-0 z-[2] [transform:translateZ(30px)] will-change-transform">

@@ -116,10 +116,10 @@ export function HeroSection() {
             imageSrc="/images/profile/dzaky.jpg"
             altText="AchmadDzaki"
             captionText="Achmad Dzaki H.A. — Fullstack Developer"
-            containerHeight="300px"
-            containerWidth="300px"
-            imageHeight="300px"
-            imageWidth="300px"
+            containerHeight="clamp(220px, 35vw, 340px)"
+            containerWidth="clamp(220px, 35vw, 340px)"
+            imageHeight="clamp(220px, 35vw, 340px)"
+            imageWidth="clamp(220px, 35vw, 340px)"
             rotateAmplitude={12}
             scaleOnHover={1.2}
             showMobileWarning={false}
