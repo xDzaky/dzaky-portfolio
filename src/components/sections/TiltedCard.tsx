@@ -1,10 +1,10 @@
-import type { ComponentProps, CSSProperties, MouseEvent, ReactNode } from "react";
+import type { CSSProperties, MouseEvent, ReactNode } from "react";
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, type SpringOptions } from "framer-motion";
-import Image from "next/image";
+import Image, { type ImageProps } from "next/image";
 
 interface TiltedCardProps {
-  imageSrc: ComponentProps<"img">["src"];
+  imageSrc: ImageProps["src"];
   altText?: string;
   captionText?: string;
   containerHeight?: CSSProperties["height"];

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import { Container } from "@/components/shared/container";
-import { RevealSection } from "@/components/shared/reveal-section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { CertificatesGrid } from "@/components/sections/certificates-grid";
 import { certificatesData } from "@/lib/data/certificates";

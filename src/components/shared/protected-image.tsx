@@ -3,10 +3,11 @@
 import Image from "next/image";
 import type { ImageProps } from "next/image";
 
-export function ProtectedImage(props: ImageProps) {
+export function ProtectedImage({ alt, ...rest }: ImageProps) {
   return (
     <Image
-      {...props}
+      alt={alt}
+      {...rest}
       onContextMenu={(e) => e.preventDefault()}
       draggable={false}
     />

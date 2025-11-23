@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { motion } from "framer-motion";
+import { motion, easeOut, type Variants } from "framer-motion";
 import { GraduationCap, School, BookOpen } from "lucide-react";
 
 import type { EducationItem } from "@/types/content";
@@ -11,18 +11,18 @@ type EducationVerticalTimelineProps = {
   items: EducationItem[];
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 32 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: easeOut },
   },
 };
 
-const highlightVariants = {
+const highlightVariants: Variants = {
   hidden: { opacity: 0, y: 12 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: easeOut } },
 };
 
 function parseDateString(value: string) {
