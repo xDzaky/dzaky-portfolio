@@ -15,6 +15,7 @@ function NavigationMenu({
 }) {
   return (
     <NavigationMenuPrimitive.Root
+      suppressHydrationWarning
       data-slot="navigation-menu"
       data-viewport={viewport}
       className={cn(
@@ -35,6 +36,7 @@ function NavigationMenuList({
 }: React.ComponentProps<typeof NavigationMenuPrimitive.List>) {
   return (
     <NavigationMenuPrimitive.List
+      suppressHydrationWarning
       data-slot="navigation-menu-list"
       className={cn(
         "group flex flex-1 list-none items-center justify-center gap-1",
@@ -110,6 +112,7 @@ function NavigationMenuViewport({
       )}
     >
       <NavigationMenuPrimitive.Viewport
+        suppressHydrationWarning
         data-slot="navigation-menu-viewport"
         className={cn(
           "origin-top-center bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border shadow md:w-[var(--radix-navigation-menu-viewport-width)]",

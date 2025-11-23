@@ -1,70 +1,74 @@
 [
   {
-    "title": "Coding Camp 2025 – Fullstack Developer",
-    "file": "/images/certificates/[Coding Camp 2025] Certificate - FS054D5Y0077.jpg"
+    "title": "Latika – Pelatihan Teknologi Informasi dan Komunikasi",
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887253/Latika_ix6wxe.jpg"
   },
   {
-    "title": "Google for Education Course Certificate (June 2025)",
-    "file": "/images/certificates/-certificate-13-06-2025-03-06-58.jpg"
+    "title": "Coding Camp 2025 – Fullstack Developer",
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887263/Coding_Camp_2025_Certificate_-_FS054D5Y0077_vj5zwq.jpg"
+  },
+  {
+    "title": "Axioo Class Program – Hardware Fundamental",
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887253/axioo-hardwarefund_nno1sb.jpg"
   },
   {
     "title": "LearningX – Web Programming",
-    "file": "/images/certificates/coursecertificate_WebPrograming_LearningX.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887261/coursecertificate_WebPrograming_LearningX_xr89jb.png"
   },
   {
     "title": "LearningX – UI/UX Design Fundamentals",
-    "file": "/images/certificates/coursecertificate_UI-UX_LearningX-1.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887253/coursecertificate_UI-UX_LearningX-1_imtqvl.png"
   },
   {
     "title": "LearningX – Python Programming",
-    "file": "/images/certificates/coursecertificate_Python_LearningX-1.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887256/coursecertificate_Python_LearningX-1_x7oaix.png"
   },
   {
     "title": "LearningX – Mobile App Development",
-    "file": "/images/certificates/coursecertificate_Mobile_App-1.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887256/coursecertificate_Mobile_App-1_wfehyt.png"
   },
   {
     "title": "Dicoding – Belajar Dasar Pemrograman Web",
-    "file": "/images/certificates/sertifikat_course_website_dicoding_-1.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887256/sertifikat_course_website_dicoding_-1_dti8jr.png"
   },
   {
     "title": "Dicoding – Belajar Fundamental Front-End Web",
-    "file": "/images/certificates/sertifikat_fundamental-fe.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887259/sertifikat_fundamental-fe_aw6vf9.png"
   },
   {
     "title": "Dicoding – Belajar Membuat Front-End Web untuk Pemula",
-    "file": "/images/certificates/sertifikat_fe-pemula.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887259/sertifikat_fe-pemula_dk5ais.png"
   },
   {
     "title": "Dicoding – Memulai Pemrograman dengan JavaScript",
-    "file": "/images/certificates/sertifikat_course_JavaScript-1.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887255/sertifikat_course_JavaScript-1_xjt9lg.png"
   },
   {
     "title": "Dicoding – Belajar Dasar Git dengan GitHub",
-    "file": "/images/certificates/sertifikat_github.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887260/sertifikat_github_pmmlxz.png"
   },
   {
     "title": "Dicoding – Belajar Dasar Pemrograman",
-    "file": "/images/certificates/sertifikat_dasar-pemogr.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887258/sertifikat_dasar-pemogr_wdyfeh.png"
   },
   {
     "title": "Dicoding – Belajar Logika Pemrograman",
-    "file": "/images/certificates/sertifikat_course_website_dicoding_Logika-Pemogr.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887255/sertifikat_course_website_dicoding_Logika-Pemogr_zobx51.png"
   },
   {
     "title": "Kominfo – Cyber Security",
-    "file": "/images/certificates/Sertifikat_CyberSecurity_Kominfo-1.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887260/Sertifikat_CyberSecurity_Kominfo-1_lwghrz.png"
   },
   {
     "title": "Dilesin – Laravel Fundamentals",
-    "file": "/images/certificates/Sertifikat_Laravel_Dilesin-1.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887260/Sertifikat_Laravel_Dilesin-1_ey7rne.png"
   },
   {
     "title": "Webflow University – Layout Basics",
-    "file": "/images/certificates/Certificate_Webflow_University_Layout-1.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887253/Certificate_webflow_University_101-1_bgvamk.png"
   },
   {
     "title": "Webflow University – 101 Course",
-    "file": "/images/certificates/Certificate_webflow_University_101-1.png"
+    "file": "https://res.cloudinary.com/dzpa07b4h/image/upload/v1763887253/Certificate_Webflow_University_Layout-1_mjmirs.png"
   }
 ]

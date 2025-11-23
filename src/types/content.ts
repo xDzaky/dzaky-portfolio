@@ -57,6 +57,11 @@ export type EducationItem = {
   highlights: string[];
 };
 
+export type CertificateItem = {
+  title: string;
+  file: string;
+};
+
 export type SocialLink = {
   platform: "github" | "linkedin" | "instagram" | "tiktok" | "youtube" | "x" | "email";
   href: string;

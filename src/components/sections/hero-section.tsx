@@ -113,7 +113,7 @@ export function HeroSection() {
         </Stagger>
         <div className="relative flex w-full items-center justify-center lg:justify-end">
           <TiltedCard
-            imageSrc="/images/profile/dzaky.jpg"
+            imageSrc="https://res.cloudinary.com/dzpa07b4h/image/upload/v1763888924/dzaky_acxfnm.jpg"
             altText="AchmadDzaki"
             captionText="Achmad Dzaki H.A. — Fullstack Developer"
             containerHeight="clamp(220px, 35vw, 340px)"

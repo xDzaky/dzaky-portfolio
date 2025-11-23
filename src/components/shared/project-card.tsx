@@ -43,6 +43,8 @@ export function ProjectCard({ project, index = 0 }: Props) {
           className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
           priority={index === 0}
+          onContextMenu={(e) => e.preventDefault()}
+          draggable={false}
         />
         {!prefersReducedMotion && (
           <motion.span

@@ -7,6 +7,7 @@ import { Container } from "@/components/shared/container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { siteConfig } from "@/config/site";
 import { getProjectBySlug, getProjectSlugs } from "@/lib/content/projects";
+import { ProtectedImage } from "@/components/shared/protected-image";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -35,13 +36,15 @@ export default async function ProjectDetailPage({ params }: Props) {
   const project = await getProjectBySlug(slug);
   if (!project) return notFound();
 
+  const coverSrc = project.cover.endsWith("-og.jpg") ? project.cover : project.cover.replace("-card", "-og");
+
   const projectLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: project.title,
     description: project.summary,
     datePublished: project.date,
-    image: `https://dzaky.codes${project.cover.replace("-card", "-og")}`,
+    image: `https://dzaky.codes${coverSrc}`,
     url: `https://dzaky.codes/projects/${project.slug}`,
     creator: {
       "@type": "Person",
@@ -59,8 +62,8 @@ export default async function ProjectDetailPage({ params }: Props) {
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <article className="space-y-8">
             <div className="overflow-hidden rounded-xl border border-border/60">
-              <Image
-                src={project.cover.replace("-card", "-og")}
+              <ProtectedImage
+                src={coverSrc}
                 alt={project.title}
                 width={1200}
                 height={630}

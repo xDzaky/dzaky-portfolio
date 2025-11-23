@@ -48,7 +48,7 @@ export default function AboutPage() {
           <div className="flex flex-col items-center gap-5 rounded-3xl border border-border/50 bg-gradient-to-br from-primary/10 via-background to-background/60 p-4 sm:p-5 shadow-[0_35px_70px_-45px_theme(colors.primary/60)] w-full max-w-xs md:ml-auto">
             <div className="relative aspect-square w-full max-w-xs overflow-hidden rounded-[2.5rem] border border-border/50 shadow-lg">
               <Image
-                src="/images/profile/dzaky.jpg"
+                src="https://res.cloudinary.com/dzpa07b4h/image/upload/v1763888924/dzaky_acxfnm.jpg"
                 alt={`Foto ${siteConfig.name}`}
                 fill
                 className="object-cover"

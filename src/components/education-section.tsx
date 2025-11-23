@@ -13,8 +13,8 @@ interface EducationSectionProps {
 
 export function EducationSection({ educationData }: EducationSectionProps) {
   return (
-    <section id="education" className="relative overflow-hidden bg-background py-20">
-      <div className="flex items-center justify-center px-4">
+    <section id="education" className="relative mb-[5px] overflow-hidden bg-background py-20">
+      <div className="mb-8 flex items-center justify-center px-4 md:mb-10">
         <ul className="grid w-full max-w-6xl grid-cols-1 gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[14rem] xl:grid-rows-2">
           <GridItem
             area="md:[grid-area:2/3/3/11] xl:[grid-area:1/4/2/10]"

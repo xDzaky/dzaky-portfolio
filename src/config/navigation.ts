@@ -12,6 +12,10 @@ export const mainNavigation = [
     href: "/education",
   },
   {
+    label: "Certificates",
+    href: "/certificates",
+  },
+  {
     label: "Projects",
     href: "/projects",
   },
@@ -20,12 +24,8 @@ export const mainNavigation = [
     href: "/skills",
   },
   {
-    label: "Blog",
-    href: "/blog",
-  },
-  {
-    label: "Contact",
-    href: "/contact",
+    label: "|",
+    href: "#",
   },
 ];
 
@@ -33,11 +33,11 @@ export const footerNavigation = {
   quickLinks: [
     { label: "About", href: "/about" },
     { label: "Education", href: "/education" },
+    { label: "Certificates", href: "/certificates" },
     { label: "Skills", href: "/skills" },
   ],
   resources: [
     { label: "Projects", href: "/projects" },
-    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
 };

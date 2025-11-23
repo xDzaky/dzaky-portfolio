@@ -41,19 +41,23 @@ export function CertificatesGrid({ items, className }: CertificatesGridProps) {
             onClick={() => handleOpen(certificate)}
             className="group block text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/80 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 via-background to-background shadow-[0_25px_80px_rgba(2,6,23,0.45)] transition-all duration-300 group-hover:-translate-y-2 group-hover:border-white/30">
+            <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-[var(--shadow-sm)] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[var(--shadow-md)] dark:border-white/10 dark:bg-gradient-to-b dark:from-white/5 dark:via-background dark:to-background dark:shadow-[0_25px_80px_rgba(2,6,23,0.45)]">
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <Image
                   src={certificate.file}
                   alt={certificate.title}
                   fill
                   sizes="(min-width: 1280px) 320px, (min-width: 768px) 45vw, 90vw"
-                  className="bg-muted/40 object-cover transition duration-500 group-hover:scale-105"
+                  className="bg-muted object-cover transition duration-500 group-hover:scale-[1.02]"
                   priority={index === 0}
                   loading={index === 0 ? "eager" : "lazy"}
+                  decoding="async"
+                  unoptimized
+                  onContextMenu={(e) => e.preventDefault()}
+                  draggable={false}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-70" />
-                <span className="absolute left-4 top-4 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-white/80">
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent opacity-60 dark:from-black/60 dark:opacity-70" />
+                <span className="absolute left-4 top-4 rounded-full bg-primary-weak px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary shadow-sm dark:bg-white/10 dark:text-white/80">
                   Preview
                 </span>
               </div>
@@ -105,6 +109,10 @@ export function CertificatesGrid({ items, className }: CertificatesGridProps) {
                 fill
                 sizes="90vw"
                 className="object-contain"
+                decoding="async"
+                unoptimized
+                onContextMenu={(e) => e.preventDefault()}
+                draggable={false}
                 priority
               />
             </div>

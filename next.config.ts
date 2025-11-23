@@ -12,6 +12,12 @@ const assetRules: RuleSetRule[] = [
 ];
 
 const nextConfig = {
+  images: {
+    domains: ["res.cloudinary.com"],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
   webpack(config: Configuration) {
     if (!config.module) {
       config.module = { rules: [] };
@@ -21,12 +27,6 @@ const nextConfig = {
     config.module.rules.push(...assetRules);
 
     return config;
-  },
-  images: {
-    domains: [],
-    dangerouslyAllowSVG: true,
-    contentDispositionType: "attachment",
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   experimental: {
     optimizePackageImports: ["@react-three/fiber", "@react-three/drei", "@react-three/rapier"],

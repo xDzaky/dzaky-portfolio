@@ -17,7 +17,7 @@ export const siteConfig = {
   heroCta: {
     primary: {
       label: "Hubungi Saya",
-      href: "#contact",
+      href: "/contact",
     },
     secondary: {
       label: "Lihat Proyek",

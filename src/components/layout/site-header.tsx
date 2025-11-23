@@ -23,7 +23,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Container } from "@/components/shared/container";
-import { ModeToggle } from "@/components/ui/mode-toggle";
 import { SiteName } from "@/components/shared/site-name";
 
 export function SiteHeader() {
@@ -88,7 +87,6 @@ export function SiteHeader() {
               </NavigationMenuList>
             </NavigationMenu>
           </nav>
-          <ModeToggle />
           <Button asChild size="sm" className="hidden md:inline-flex">
             <Link href={siteConfig.heroCta.primary.href}>
               {siteConfig.heroCta.primary.label}

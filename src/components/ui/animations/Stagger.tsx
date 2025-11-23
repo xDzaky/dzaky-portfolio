@@ -1,6 +1,6 @@
 "use client";
 
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import type {
   ElementRef,
   ElementType,
@@ -41,11 +41,15 @@ function StaggerInner<Tag extends MotionTag = "div">(
   ref: ForwardedRef<ElementRef<DOMMotionComponents[Tag]>>,
 ) {
   const prefersReducedMotion = useReducedMotion() ?? false;
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  const shouldAnimate = mounted && !prefersReducedMotion;
   const motionComponents = motion as unknown as DOMMotionComponents;
   const MotionComponent = (motionComponents[as] ?? motion.div) as ElementType;
 
   const containerVariants = variants ?? {
-    hidden: prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 12 },
+    hidden: prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 12 },
     visible: {
       opacity: 1,
       y: 0,
@@ -68,8 +72,9 @@ function StaggerInner<Tag extends MotionTag = "div">(
       ref={ref}
       className={cn(className)}
       variants={containerVariants}
-      initial={initial ?? "hidden"}
-      whileInView={whileInView ?? "visible"}
+      initial={initial ?? (shouldAnimate ? "hidden" : false)}
+      animate={!shouldAnimate ? "visible" : undefined}
+      whileInView={whileInView ?? (shouldAnimate ? "visible" : undefined)}
       viewport={viewport ?? defaultViewport}
       {...(rest as HTMLMotionProps<Tag>)}
     >
@@ -83,6 +88,9 @@ function StaggerItemInner<Tag extends MotionTag = "div">(
   ref: ForwardedRef<ElementRef<DOMMotionComponents[Tag]>>,
 ) {
   const prefersReducedMotion = useReducedMotion() ?? false;
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const shouldAnimate = mounted && !prefersReducedMotion;
   const motionComponents = motion as unknown as DOMMotionComponents;
   const MotionComponent = (motionComponents[as] ?? motion.div) as ElementType;
 
@@ -106,6 +114,8 @@ function StaggerItemInner<Tag extends MotionTag = "div">(
       ref={ref}
       className={cn(className)}
       variants={itemVariants}
+      initial={!shouldAnimate ? false : undefined}
+      animate={!shouldAnimate ? "visible" : undefined}
       {...(rest as HTMLMotionProps<Tag>)}
     >
       {children}
