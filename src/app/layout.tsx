@@ -7,17 +7,22 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { PageTransition } from "@/components/layout/page-transition";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
+import { WebVitalsReporter } from "@/components/web-vitals-reporter";
 
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 const sameAs = socialLinks.filter((link) => link.platform !== "email").map((link) => link.href);
@@ -74,6 +79,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
+      </head>
       <body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} bg-background antialiased`}>
         <ThemeProvider>
           <SiteHeader />
@@ -82,6 +92,7 @@ export default function RootLayout({
           </main>
           <SiteFooter />
           <Analytics />
+          <WebVitalsReporter />
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }} />
         </ThemeProvider>
       </body>

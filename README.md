@@ -1,6 +1,6 @@
 # Portofolio Dzaky
 
-Website pribadi modern untuk menampilkan proyek, pengalaman, dan keahlian Dzaky. Dibangun dengan Next.js 15, Tailwind CSS, dan Framer Motion untuk menghadirkan pengalaman yang halus, responsif, dan siap produksi di Vercel.
+Website pribadi modern untuk menampilkan proyek, pengalaman, dan keahlian Dzaky. Dibangun dengan Next.js 15, Tailwind CSS, dan Framer Motion untuk pengalaman gelap yang halus, responsif, dan siap produksi di Vercel.
 
 ## 📸 Pratinjau
 
@@ -9,8 +9,8 @@ Website pribadi modern untuk menampilkan proyek, pengalaman, dan keahlian Dzaky.
 
 ## ✨ Fitur Utama
 - Animasi interaktif (hero, timeline pendidikan, hover card) menggunakan utilitas motion bersama.
-- Mode terang/gelap adaptif dengan tema kustom dan gradien bercahaya.
-- Halaman khusus untuk proyek, skill, pendidikan, blog teaser, serta formulir kontak profesional.
+- Mode gelap permanen dengan token desain kustom dan gradien halus.
+- Halaman khusus untuk proyek, skill, pendidikan, sertifikat, serta formulir kontak profesional.
 - SEO bawaan: sitemap, robots, dan Open Graph image dinamis.
 - Integrasi Vercel untuk preview per branch dan pengiriman email via Resend.
 
@@ -45,9 +45,9 @@ src/
     sections/                     # Hero, timeline, grid skill, dsb.
     ui/animations/                # HoverCard, Reveal, Stagger, utilitas motion
   config/                         # Metadata dan navigasi
-  data/                           # Konten statis (proyek, skill, edukasi)
+  data/                           # Konten statis (proyek, skill, edukasi, sertifikat)
 public/
-  images/                         # Aset proyek & profil
+  images/                         # Aset proyek & profil (sebagian di-host Cloudinary)
   tools/                          # Logo stack teknologi
   resume.pdf (opsional)           # Untuk tautan unduh CV
 ```
@@ -56,6 +56,7 @@ public/
 - `HoverCard`, `Reveal`, `Stagger`: abstraksi Framer Motion dengan typing aman.
 - `education-vertical-timeline.tsx`: timeline beranimasi dengan efek glow.
 - `Glowing-Effect.tsx`: gradien atmosfer untuk hero dan CTA.
+- `protected-image.tsx`: mencegah klik-kanan/drag pada gambar sensitif.
 
 ## ✅ Pemeriksaan Kode
 ```bash
@@ -74,4 +75,4 @@ npm run lint   # lint Next.js + pemeriksaan tipe
 
 ---
 
-Website ini dibuat dan dikelola oleh **Dzaky**. Silakan fork, kembangkan, atau hubungi langsung melalui formulir kontak di situs.***
+Website ini dibuat dan dikelola oleh **Dzaky**. Silakan fork, kembangkan, atau hubungi langsung melalui formulir kontak di situs.

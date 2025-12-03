@@ -111,7 +111,8 @@ export function HeroSection() {
             <SocialLinks />
           </StaggerItem>
         </Stagger>
-        <div className="relative flex w-full items-center justify-center lg:justify-end">
+        {/* ✅ CRITICAL FIX: Fixed height container to prevent CLS */}
+        <div className="relative flex w-full h-[340px] items-center justify-center lg:justify-end">
           <TiltedCard
             imageSrc="https://res.cloudinary.com/dzpa07b4h/image/upload/v1763888924/dzaky_acxfnm.jpg"
             altText="AchmadDzaki"
