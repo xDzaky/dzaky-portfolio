@@ -1,0 +1,51 @@
+---
+slug: xandeum-analytics
+title: "Xandeum Analytics — Real-time pNode Network Monitoring Platform"
+summary: "Platform analytics komprehensif untuk memantau 146+ storage provider nodes (pNodes) Xandeum dengan data real-time, visualisasi interaktif, dan fitur export."
+stack: ["React 18", "TypeScript", "Vite", "Tailwind CSS", "TanStack Query", "Recharts"]
+category: "web"
+role: "Full-stack Developer"
+features:
+  - "Dashboard real-time dengan 146+ pNodes dari jaringan Xandeum"
+  - "7+ visualisasi interaktif: timeline, pie chart, geographic map, leaderboard"
+  - "Advanced search, filtering, favorites system, dan export CSV/JSON"
+  - "Backend proxy Express.js di Railway untuk handle mixed content HTTPS→HTTP"
+impact: "Menyediakan platform monitoring profesional setara validators.app untuk ekosistem Xandeum, dengan bundle optimal 221KB dan auto-refresh 30 detik."
+demoUrl: "https://xandeum-analytics.netlify.app/"
+repoUrl: "https://github.com/xDzaky/xandeum-analytics"
+cover: "https://res.cloudinary.com/dzpa07b4h/image/upload/v1767089001/Screenshot_from_2025-12-30_17-02-46_cg51ml.png"
+date: "2025-12-10"
+---
+
+Xandeum Analytics adalah platform monitoring full-stack untuk jaringan storage provider nodes (pNodes) Xandeum. Dibangun sebagai submission bounty competition, platform ini mengintegrasikan pRPC endpoint resmi Xandeum dengan arsitektur modern React + TypeScript.
+
+## Arsitektur
+
+Platform menggunakan **backend proxy Express.js di Railway** untuk mengatasi mixed content blocking browser (HTTPS → HTTP):
+- Frontend SPA di Netlify (React + Vite + Tailwind)
+- Backend API di Railway (Express.js + CORS + 9 fallback endpoints)
+- Xandeum pRPC Network (JSON-RPC 2.0: `get-pods-with-stats`)
+
+## Fitur Utama
+
+- **Dashboard Network**: Health gauge, active/inactive nodes, metrics real-time, export CSV/JSON
+- **Node Explorer**: Search (ID/IP/pubkey), filter status, favorites system, sortable table
+- **Analytics**: 24-hour timeline, version distribution, geographic map, uptime leaderboard
+- **Node Detail**: Overview lengkap, technical specs, performance metrics, storage info
+- **Auto-refresh**: 30 detik dengan smart caching TanStack Query
+- **Accessibility**: ARIA labels, keyboard navigation, WCAG AA color contrast
+
+## Teknologi
+
+- **Frontend**: React 18.3, TypeScript 5.7, Vite 7.2, Tailwind CSS 3.4
+- **State Management**: TanStack React Query v5 (caching, retry, loading states)
+- **Visualisasi**: Recharts 2.15 untuk 7+ chart interaktif
+- **Backend**: Express.js proxy di Railway dengan 9 fallback endpoints
+- **Deployment**: Netlify (frontend) + Railway (backend), bundle 221KB gzipped
+
+## Performance
+
+- Initial load < 2 detik, Time to Interactive < 3 detik
+- Bundle 221KB gzipped dari 2,399 modules
+- Code splitting otomatis, lazy loading routes, tree shaking
+- 3 retry attempts dengan graceful fallback
