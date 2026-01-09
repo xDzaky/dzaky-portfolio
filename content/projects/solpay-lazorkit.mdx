@@ -1,0 +1,84 @@
+---
+slug: solpay-lazorkit
+title: "SolPay — Gasless Subscription Payments on Solana"
+summary: "Platform pembayaran subscription di Solana dengan passkey authentication dan sponsored transactions. User bisa bayar USDC tanpa SOL untuk gas fees."
+stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Solana", "Lazorkit SDK", "Prisma", "PostgreSQL", "Zustand", "React Query"]
+category: "web3"
+role: "Full Stack Developer"
+features:
+  - "Passkey authentication dengan FaceID/TouchID/Windows Hello"
+  - "Gasless transactions: bayar USDC tanpa perlu SOL untuk gas"
+  - "Subscription management dengan history tracking"
+  - "Mock Mode untuk testing tanpa token real"
+impact: "Menyederhanakan onboarding crypto dari 5 langkah jadi 2 langkah, menghilangkan 95%+ user drop-off dengan UX yang seamless."
+demoUrl: "https://solpay-lazorkit.vercel.app"
+repoUrl: "https://github.com/xDzaky/solpay-lazorkit"
+cover: "https://res.cloudinary.com/dzpa07b4h/image/upload/v1767921601/solpay-lazorkit_q0nfyt.png"
+date: "2026-01-09"
+---
+
+**SolPay** adalah platform pembayaran subscription yang dibangun dengan [Lazorkit SDK](https://lazorkit.com), memungkinkan user melakukan pembayaran crypto tanpa kompleksitas tradisional — cukup scan biometrics, tanpa seed phrase atau gas fees.
+
+## 🎯 Problem & Solution
+
+**Problem:** Onboarding crypto tradisional rumit — download wallet, catat 24 seed phrase, beli SOL untuk gas, pelajari token accounts. Hasilnya? **95%+ user drop-off**.
+
+**Solusi SolPay:** Cukup click "Connect" → scan FaceID/TouchID → selesai! **Tanpa seed phrase, gas fee, atau browser extension.**
+
+## ✨ Fitur Utama
+
+- 🔐 **Passkey Auth** — Sign up dengan biometrics (FaceID/TouchID/Windows Hello), tanpa manage private keys
+- 💸 **Gasless TX** — Bayar USDC tanpa SOL. Kora Paymaster otomatis sponsor gas fees
+- 📊 **Subscription** — Pilih plan, bayar, track history, upgrade/cancel kapan saja
+- 🧪 **Mock Mode** — Testing dengan $1,000 USDC simulated tanpa token real
+
+## 🏗️ Cara Kerja
+
+```
+User click Connect → Passkey Auth (biometrics) → Smart Wallet created
+    ↓
+Pilih subscription plan → Build USDC transfer instruction
+    ↓
+Sign dengan biometrics → Paymaster sponsor gas → TX confirmed on-chain
+    ↓
+Subscription aktif! 🎉
+```
+
+**Teknologi di balik layar:**
+- **Passkey** disimpan di device Secure Enclave (aman, tidak pernah expose private key)
+- **Smart Wallet** (PDA) derived dari WebAuthn credential
+- **Kora Paymaster** membayar semua SOL gas fees
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 14 (App Router), TypeScript, Tailwind CSS
+- **State**: Zustand + React Query
+- **Database**: Prisma + PostgreSQL
+- **Blockchain**: Solana, @lazorkit/wallet, @solana/spl-token
+- **Deploy**: Vercel + Neon Database
+
+## 🧪 Mock Mode
+
+Untuk kemudahan testing tanpa token real, project dilengkapi Mock Mode:
+- Balance: **$1,000 USDC** (simulated)
+- Transactions tersimpan di localStorage
+- Full flow: subscribe, view history, cancel
+
+Set `NEXT_PUBLIC_MOCK_MODE=false` untuk real USDC di Devnet.
+
+## 🏆 Lazorkit Bounty Submission
+
+Proyek ini dibangun untuk **Lazorkit Bounty** (Desember 2025 - Januari 2026) dengan deliverables:
+
+- ✅ Working repo dengan struktur clean (21+ components, 8 API endpoints)
+- ✅ 4 comprehensive tutorials + 1,400+ lines technical spec
+- ✅ Live demo di Vercel
+- ✅ Full TypeScript dengan JSDoc documentation
+- ✅ Mock mode untuk developer-friendly testing
+
+## 🔑 Key Learnings
+
+- **Web3 UX Design** — Menyederhanakan kompleksitas crypto menjadi consumer-friendly experience
+- **Passkey/WebAuthn** — Authentication yang secure tanpa manage private keys
+- **Gasless TX** — Integrasi paymaster untuk menghilangkan gas complexity dari user
+- **Full Stack Web3** — Next.js + Solana blockchain integration dengan type-safe code
