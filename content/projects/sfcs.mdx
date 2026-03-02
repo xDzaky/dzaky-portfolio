@@ -1,0 +1,59 @@
+---
+slug: sfcs
+title: "SFCS — School Facility Complaint System"
+summary: "Sistem pengaduan fasilitas sekolah berbasis web lengkap dengan workflow multi-role, dashboard real-time, dan dukungan PWA."
+stack: ["Laravel 12", "PHP 8.2", "Tailwind CSS", "Alpine.js", "MySQL", "Vite"]
+category: "web"
+role: "Full-stack Developer"
+features:
+  - "Workflow multi-role (siswa, guru, admin, teknisi, kepala sekolah, super admin) dengan notifikasi role-based dan status pengaduan yang transparan."
+  - "Dashboard monitoring real-time: statistik umum, visual chart, filter terperinci, dan ekspor data ke Excel."
+  - "Progressive Web App: instalable, caching offline ringan, dan push notification (coming soon)."
+  - "Operasional siap produksi: queue database, cache config/route/view, backup & restore, dan panduan troubleshoot lengkap."
+impact: "Membantu sekolah merespons kerusakan fasilitas lebih cepat, terdokumentasi, dan dapat dipertanggungjawabkan."
+cover: "https://res.cloudinary.com/dzpa07b4h/image/upload/v1772480562/sfcs-dashboard_vd8ad9.png"
+date: "2026-03-03"
+status: published
+---
+
+<Prose>
+  <p>
+    SFCS adalah sistem manajemen pengaduan fasilitas sekolah yang saya bangun untuk menghubungkan siswa, guru,
+    teknisi, dan staff administrasi dalam satu rangkaian workflow yang terstruktur. Semua pengaduan ditangani via web,
+    terverifikasi admin, dilanjutkan ke teknisi, dan ditutup dengan feedback dari pelapor.
+  </p>
+  <p>
+    Fokus saya ada pada transparansi: setiap peran melihat status yang relevan, menerima notifikasi otomatis,
+    dan bisa mengakses laporan harian atau periodik lewat dashboard. Di sisi teknis, saya merancang sistem ini agar
+    bisa berjalan sebagai PWA sehingga bisa diakses dari perangkat mobile dengan pengalaman mirip aplikasi native.
+  </p>
+  <p>
+    Paket ini juga menyiapkan dokumentasi instalasi, troubleshooting, dan cadangan agar sekolah bisa mempertahankan
+    sistem dengan mudah tanpa bergantung pada intervensi developer.
+  </p>
+</Prose>
+
+## Highlight Features
+
+- **Workflow multi-role**: siswa/guru buat pengaduan lengkap dengan foto, admin verifikasi/assign, teknisi update progress, kepala sekolah & super admin melihat statistik dan pengaturan sistem.
+- **Notifikasi pintar**: role-based notification di browser plus mekanisme update action-oriented agar setiap tiket dapat ditangani cepat.
+- **Dashboard & reporting**: statistik real-time, chart per kategori/gedung/prioritas, filter lanjutan, dan ekspor Excel untuk review management.
+- **PWA readiness**: installable, cache offline terbatas, dan alur push notification (coming soon) demi akses non-stop di perangkat apa pun.
+- **Operasional siap produksi**: composer/npm build, cache config/route/view, queue database driver, migration otomatis, backup/restore, dan panduan troubleshooting lengkap.
+
+## Platform Stack
+
+- **Backend**: Laravel 12, PHP 8.2, database MySQL/MariaDB, Laravel Breeze untuk auth, database queue driver.
+- **Frontend**: Tailwind CSS 3, Alpine.js, Vite build pipeline, Heroicons, Chart.js untuk visualisasi.
+- **Infra & Tools**: Apache/Nginx, Redis (opsional) atau file cache, SMTP email (Gmail/Mailgun), storage lokal atau S3-compatible.
+
+## Workflow singkat
+
+1. Pelapor (siswa/guru) mengisi form pengaduan dengan kategori, lokasi, dan foto.
+2. Admin memverifikasi, reject jika tidak valid, atau assign ke teknisi.
+3. Teknisi update status (Proses → Selesai) dan upload bukti.
+4. Pelapor diberi notifikasi untuk memberi feedback sebelum tiket ditutup.
+
+<span style={{ display: "block", textAlign: "center", marginTop: "2rem" }}>
+  © 2026 SFCS • Developed by xDzaky
+</span>

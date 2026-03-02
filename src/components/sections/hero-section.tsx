@@ -107,8 +107,8 @@ export function HeroSection() {
               </MotionButton>
             ) : null}
           </StaggerItem>
-          <StaggerItem as="div" className="pt-4">
-            <SocialLinks />
+          <StaggerItem as="div" className="pt-5">
+            <SocialLinks variant="hero" />
           </StaggerItem>
         </Stagger>
         {/* ✅ CRITICAL FIX: Fixed height container to prevent CLS */}
