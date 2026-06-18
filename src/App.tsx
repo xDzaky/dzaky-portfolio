@@ -11,7 +11,6 @@ import { Skills } from "@/components/Skills";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { ThemeProvider } from "@/providers/theme-provider";
 import { AllCertificates } from "@/components/AllCertificates";
 import { AllProjects } from "@/components/AllProjects";
 import { ProjectDetail } from "@/components/ProjectDetail";
@@ -98,7 +97,6 @@ export default function App() {
   }, []);
 
   return (
-    <ThemeProvider>
       <div className="min-h-screen bg-background text-foreground flex w-full flex-col overflow-x-hidden pt-14">
         <Header />
         <main className="grow">
@@ -124,7 +122,6 @@ export default function App() {
         </main>
         <Footer />
       </div>
-    </ThemeProvider>
   );
 }
 
