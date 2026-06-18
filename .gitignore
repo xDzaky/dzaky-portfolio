@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.*
+
+# Custom untracked files/folders
+promt-store/
+ss-page/
+promt-updated-achmad-dzaki-portfolio-v2.md

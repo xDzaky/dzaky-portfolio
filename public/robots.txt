@@ -1,0 +1,15 @@
+# Portfolio - Achmad Dzaki Habibullah Al Azhar
+# https://xdzaky.my.id
+
+User-agent: *
+Allow: /
+Allow: /projects
+Allow: /project/
+Allow: /certificates
+Allow: /store
+Allow: /store/
+Disallow: /assets/
+Disallow: /_next/
+Disallow: /api/
+# Sitemap location
+Sitemap: https://xdzaky.my.id/sitemap.xml
