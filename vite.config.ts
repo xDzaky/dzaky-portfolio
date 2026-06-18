@@ -31,7 +31,6 @@ export default defineConfig({
           "react-vendor": ["react", "react-dom"],
           "gsap-vendor": ["gsap", "gsap/ScrollTrigger"],
           "motion-vendor": ["motion"],
-          "cloudinary-vendor": ["@cloudinary/url-gen", "@cloudinary/react"],
         },
       },
     },
